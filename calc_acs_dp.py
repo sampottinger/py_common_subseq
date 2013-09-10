@@ -30,6 +30,7 @@ def count_common_subsequences(seq_1, seq_2):
     @param seq_2: The second collection to find subsequences in.
     @type seq_2: Any integer indexable collection (list, tuple, etc.)
     @return: The number of common subsequences between seq_1 and seq_2.
+    @rtype: int
     """
     # Use length plus one to provide a row and column in the subsequence table,
     # a row / column not corresponding to an element. This provides
