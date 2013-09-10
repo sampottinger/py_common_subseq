@@ -116,8 +116,8 @@ C<sub>i j</sub> = C<sub>i j-1</sub> ∪ C<sub>i-1 j</sub> if A<sub>i</sub> ≠ B
  - Since A<sub>i</sub> ≠ B<sub>j</sub>, all common subsequences between A' and B' (C<sub>i j</sub>) must already occur in the set of common subsequences between B'' and A' (C<sub>i j-1</sub>) or B' and A'' (C<sub>i-1 j</sub>) since A' and B' do not share the same final element.
  - Thus, all common subsequences between A' and B' (C<sub>i j</sub>) equals the union of C<sub>i j-1</sub> and C<sub>i-1 j</sub>.
  
- 
-**(informal) proof **  
+
+**Informal proof**  
  - C<sub>i j</sub> contains the subsets between A' and B' if i>=0 ∧ i<=|A|∧ j>=0 ∧ j<=|B|.
    - C<sub>00</sub> through C<sub>0j</sub> = the set of an empty sequence by definition.
    - C<sub>00</sub> through C<sub>i0</sub> = the set of an empty sequence by definition.
