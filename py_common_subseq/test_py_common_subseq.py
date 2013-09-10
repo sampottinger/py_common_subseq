@@ -1,6 +1,6 @@
 """Unit tests for the calc_acs_dp all common subsequences mini-module.
 
-@author: A. Samuel Pottinger
+@author: A. Samuel Pottinger (samnsparky, Gleap LLC, https://gleap.org)
 @license: MIT
 """
 

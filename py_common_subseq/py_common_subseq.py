@@ -7,7 +7,7 @@ produce a list all of those common subsequences. Additionally, both the classic
 implementation as well as the variation offer some space optimizations
 similar to those found in longest common subsequence imeplementations.
 
-@author: A. Samuel Pottinger (http://gleap.org)
+@author: A. Samuel Pottinger (samnsparky, Gleap LLC, http://gleap.org)
 @license: MIT
 """
 

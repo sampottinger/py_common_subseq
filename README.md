@@ -1,6 +1,6 @@
 Python All Common Subsequences
 ==============================
-A re-usable Python micro-libary that finds all of the subsequences shared between two sequences (like strings or lists) in O(|A| × |B|) time. 
+A re-usable Python micro-libary that finds all of the subsequences shared between two sequences (like strings or lists) in polynomial time. 
 
 
 #### Author, License, and Conditions  
