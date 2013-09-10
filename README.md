@@ -8,11 +8,14 @@ A re-usable Python micro-libary that finds all of the subsequences shared betwee
 Released under the [MIT license](http://opensource.org/licenses/MIT). Don't forget to be awesome.
 
 
-#### Installation
+#### Installation (pip)
 ```bash
 pip install py_common_subseq
 ```
-However, this mico-library is a single file and, if you don't want to use pip, just grab py_common_subseq/py_common_subseq.py. This micro-library does not have any additional dependecies beyond the Python standard library.
+
+
+#### Installation (manual / single file)
+This mico-library is a single file and engineers that may prefer to include the file directly instead of using pip can simply copy py_common_subseq/py_common_subseq.py into an accessible location. This micro-library does not have any additional dependecies beyond the Python standard library.
 
 
 #### Quickstart
@@ -58,6 +61,7 @@ While the longest common subsequence allows for the comparison of sequences, som
 
 
 #### Testing
+Within the py_common_subseq folder, run:
 ```bash
 python test_py_common_subseq.py
 ```
