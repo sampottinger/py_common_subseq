@@ -32,6 +32,13 @@ def count_common_subsequences(seq_1, seq_2):
     @return: The number of common subsequences between seq_1 and seq_2.
     @rtype: int
     """
+    # Ensure the smaller of the two sequences is used to create the columns for
+    # the DP table.
+    if len(seq_1) < len(seq_2):
+        new_seq_1 = seq_2
+        seq_2 = seq_1
+        seq_1 = new_seq_1
+
     # Use length plus one to provide a row and column in the subsequence table,
     # a row / column not corresponding to an element. This provides
     # initialization values to the algorithm and handles the edge case of
@@ -103,6 +110,13 @@ def find_common_subsequences(seq_1, seq_2):
     @return: Set of subsequences in common between seq_1 and seq_2.
     @rtype: set
     """
+    # Ensure the smaller of the two sequences is used to create the columns for
+    # the DP table.
+    if len(seq_1) < len(seq_2):
+        new_seq_1 = seq_2
+        seq_2 = seq_1
+        seq_1 = new_seq_1
+
     # Use length plus one to provide a row and column in the subsequence table,
     # a row / column not corresponding to an element. This provides
     # initialization values to the algorithm and handles the edge case of
