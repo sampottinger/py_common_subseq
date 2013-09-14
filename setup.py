@@ -18,12 +18,11 @@ def read(fname):
 
 setup(
     name='py_common_subseq',
-    version='0.1.2',
+    version='0.1.3',
     packages=['py_common_subseq'],
     author='A. Samuel Pottinger',
     url='https://github.com/Samnsparky/py_common_subseq',
-    description=('Micro-library finding all common subsequences between two ',
-        'sequences in polynomial time.'),
+    description='Micro-library finding all common subsequences between two sequences in polynomial time.',
     license='MIT',
     keywords='all common subsequences ACS dynamic programming',
     long_description=read('README.txt'),
