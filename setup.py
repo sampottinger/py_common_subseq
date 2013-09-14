@@ -18,7 +18,7 @@ def read(fname):
 
 setup(
     name='py_common_subseq',
-    version='0.1.1',
+    version='0.1.2',
     packages=['py_common_subseq'],
     author='A. Samuel Pottinger',
     url='https://github.com/Samnsparky/py_common_subseq',
@@ -26,7 +26,7 @@ setup(
         'sequences in polynomial time.'),
     license='MIT',
     keywords='all common subsequences ACS dynamic programming',
-    long_description=read('README.md'),
+    long_description=read('README.txt'),
     classifiers=[
         'Development Status :: 4 - Beta',
         'Intended Audience :: Developers',
