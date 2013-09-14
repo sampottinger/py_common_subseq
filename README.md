@@ -138,3 +138,5 @@ Note: This section will only discusses the space saving modifications in depth. 
 
 As implemented in this micro-library, this algorithm manipulates its table (T) by working through a nested loop, manipulating all of row's elements before moving to the next. The result of the algorithm rests in T[|A|][|B|] or T[len(seq_1)][len(seq_2]). Since the algorithm never returns to previously visited rows, only the "current" and "previous" rows need to be maintained in memory. Both count_common_subsequences and find_common_subsequences take advantage of this to remove all rows before the "previous" row during iteration but do not otherwise change the behavior of the algorithm's operation. Moreover the algorithm will choose the number of rows and elements per row such that it will iterate max(|A|,|B|) times over rows of min(|A|,|B|) elements. This reduces the space required for the algorithm from O(|A||B|) to O(min(|A|,|B|)).
 
+Of course, for find_common_subsequences, the sets themselves take up memory and if two identitical subsequences are compared, O(2^n * n) sets will be created.
+
