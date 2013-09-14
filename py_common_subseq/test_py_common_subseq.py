@@ -36,7 +36,7 @@ class TestCalcACS(unittest.TestCase):
         self.assertEqual(all_shared, 8)
 
     def test_find_common_subsequences(self):
-        """Test getting a list of subseqeunces between two sequences."""
+        """Test getting a list of subsequences between two sequences."""
         no_shared = py_common_subseq.find_common_subsequences(NONE_SHARED_1,
             NONE_SHARED_2)
         self.assertEqual(no_shared, set(['']))
@@ -51,6 +51,18 @@ class TestCalcACS(unittest.TestCase):
             ALL_SHARED_2)
         components = ['', 'e', 's', 't', 'es', 'st', 'et', 'est']
         self.assertEqual(all_shared, set(components))
+
+    def test_seperator(self):
+        """Test getting a list of subsequences with a non-default seperator.
+
+        Test getting a list of subsequences where elements of that subsequence
+        are joined together by a non-standard seperator.
+        """
+        partially_shared = py_common_subseq.find_common_subsequences(
+            PARTIALLY_SHARED_1, PARTIALLY_SHARED_2, sep=' ')
+        components = ['', ' q e r', ' w r', ' q w r', ' e r', ' q r', ' e',
+            ' q w', ' q', ' r', ' q e', ' w']
+        self.assertEqual(partially_shared, set(components))
 
 
 if __name__ == '__main__':

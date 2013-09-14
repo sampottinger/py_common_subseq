@@ -74,7 +74,7 @@ def count_common_subsequences(seq_1, seq_2):
     return subseq_last_row[seq_2_len]
 
 
-def add_matched_element(element, target_set):
+def add_matched_element(element, target_set, sep):
     """Append an element to the end of all elements in a set.
 
     Creates a new copy of target_set with an element appended to the end of all
@@ -88,11 +88,11 @@ def add_matched_element(element, target_set):
         all of its items and the original target_set.
     @rtype: set
     """
-    new_elements = map(lambda x: x + element, target_set)
+    new_elements = map(lambda x: x + sep + element, target_set)
     return target_set.union(new_elements)
 
 
-def find_common_subsequences(seq_1, seq_2):
+def find_common_subsequences(seq_1, seq_2, sep=''):
     """Find the number of common subsequences between two collections.
 
     This function finds the common subsequences between two collections and
@@ -107,6 +107,8 @@ def find_common_subsequences(seq_1, seq_2):
     @type seq_1: Any integer indexable collection (list, tuple, etc.)
     @param seq_2: The second collection to find subsequences in.
     @type seq_2: Any integer indexable collection (list, tuple, etc.)
+    @keyword sep: Seperator to put between elements when constructing a
+        subsequence. Defaults to ''.
     @return: Set of subsequences in common between seq_1 and seq_2.
     @rtype: set
     """
@@ -142,7 +144,7 @@ def find_common_subsequences(seq_1, seq_2):
                 diagonal_cell_value = subseq_last_row[col - 1]
                 matched_element = seq_1[row-1]
                 new_cell_value = add_matched_element(matched_element,
-                    diagonal_cell_value)
+                    diagonal_cell_value, sep)
             else:
                 above_set = subseq_last_row[col]
                 left_set = subseq_current_row[col-1]
