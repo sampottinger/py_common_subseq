@@ -18,7 +18,7 @@ def read(fname):
 
 setup(
     name='py_common_subseq',
-    version='0.1',
+    version='0.1.1',
     packages=['py_common_subseq'],
     author='A. Samuel Pottinger',
     url='https://github.com/Samnsparky/py_common_subseq',

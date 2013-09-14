@@ -27,6 +27,8 @@ This mico-library is a single file and engineers that may prefer to include the 
 12
 >>> py_common_subseq.find_common_subsequences(test_seq_1, test_seq_2)
 set(['', 'qer', 'wr', 'qwr', 'er', 'qr', 'e', 'qw', 'q', 'r', 'qe', 'w'])
+>>> py_common_subseq.find_common_subsequences(test_seq_1, test_seq_2, sep=',')
+set(['', ',q,w,r', ',e,r', ',e', ',w,r', ',q,w', ',q,r', ',w', ',r', ',q', ',q,e', ',q,e,r'])
 ```
 
 
@@ -43,7 +45,7 @@ This is more space efficient O(len(seq_1)) than find_common_subsequences.
  - **return:** Integer. The number of common subsequences between seq_1 and seq_2.
 
 
-```find_common_subsequences(seq_1, seq_2)```  
+```find_common_subsequences(seq_1, seq_2, sep='', empty_val='')```  
 Find the number of common subsequences between two collections.
 
 This function finds the common subsequences between two collections and
@@ -52,6 +54,8 @@ efficient (O(len(seq_1)^2)) than count_common_subsequences.
  
  - **seq_1:** Any integer indexable collection (list, tuple, etc.). The first collection to find subsequences in.
  - **seq_2:** Any integer indexable collection (list, tuple, etc.). The second collection to find subsequences in.
+ - **sep:** Seperator to put between elements when constructing a subsequence. Keyword argument defaulting to ''.
+ - **empty_val:** The value to use to represent the empty set. Keyword argument defaulting to ''.
  - **return:** Python standard lib set. Set of subsequences in common between seq_1 and seq_2.
 
 

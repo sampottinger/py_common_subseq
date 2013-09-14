@@ -92,7 +92,7 @@ def add_matched_element(element, target_set, sep):
     return target_set.union(new_elements)
 
 
-def find_common_subsequences(seq_1, seq_2, sep=''):
+def find_common_subsequences(seq_1, seq_2, sep='', empty_val=''):
     """Find the number of common subsequences between two collections.
 
     This function finds the common subsequences between two collections and
@@ -109,6 +109,7 @@ def find_common_subsequences(seq_1, seq_2, sep=''):
     @type seq_2: Any integer indexable collection (list, tuple, etc.)
     @keyword sep: Seperator to put between elements when constructing a
         subsequence. Defaults to ''.
+    @keyword empty_val: The value to use to represent the empty set.
     @return: Set of subsequences in common between seq_1 and seq_2.
     @rtype: set
     """
@@ -133,8 +134,8 @@ def find_common_subsequences(seq_1, seq_2, sep=''):
     # Initialize the first two rows of a "2D array" consisting of
     # seq_1_len_plus_1 by seq_2_len_plus_1 values. Note that, due to space
     # optimizations, only two rows are ever maintained in memory.
-    subseq_last_row = [set([''])] * seq_2_len_plus_1
-    subseq_current_row = [set([''])] + [set()] * seq_2_len
+    subseq_last_row = [set([empty_val])] * seq_2_len_plus_1
+    subseq_current_row = [set([empty_val])] + [set()] * seq_2_len
 
     for row in xrange(1, seq_1_len_plus_1):
 
@@ -152,6 +153,6 @@ def find_common_subsequences(seq_1, seq_2, sep=''):
             subseq_current_row[col] = new_cell_value
 
         subseq_last_row = subseq_current_row
-        subseq_current_row = [set([''])] + [set()] * seq_2_len
+        subseq_current_row = [set([empty_val])] + [set()] * seq_2_len
 
     return subseq_last_row[seq_2_len]
