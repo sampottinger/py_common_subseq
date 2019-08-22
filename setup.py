@@ -18,7 +18,7 @@ def read(fname):
 
 setup(
     name='py_common_subseq',
-    version='0.1.6',
+    version='0.1.7',
     packages=['py_common_subseq'],
     author='A. Samuel Pottinger',
     url='https://github.com/Samnsparky/py_common_subseq',
@@ -43,5 +43,6 @@ setup(
         'Topic :: Scientific/Engineering :: Information Analysis',
         'Topic :: Text Processing'
     ],
+    include_package_data=True,
     download_url='https://github.com/sampottinger/py_common_subseq/archive/master.zip'
 )
