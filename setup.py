@@ -25,7 +25,7 @@ setup(
     description='Microlibrary finding all common subsequences between two sequences in polynomial time.',
     license='MIT',
     keywords='all common subsequences ACS dynamic programming',
-    long_description=open('README.txt').read(),
+    long_description=read('README_simple.md'),
     long_description_content_type='text/markdown',
     classifiers=[
         'Development Status :: 4 - Beta',
